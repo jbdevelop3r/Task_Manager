@@ -1,0 +1,14 @@
+<h1>Categories</h1>
+
+<ul>
+  <% @categories.each do |category| %>
+    <li> 
+        <%= link_to category.title, category%>
+    </li>
+  <% end %>
+</ul>
+
+<% if flash[:notice].present? %>
+    <p class='flash-notice'><%= flash[:notice] %></p>
+<% end %>
+<%= link_to "New Category", new_category_path %>

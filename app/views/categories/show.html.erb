@@ -1,0 +1,11 @@
+<h1><%= @category.title %></h1>
+
+<ul>
+  <li><%= link_to "Edit", edit_category_path(@category) %></li>
+  <li><%= link_to "Home", categories_path(@category) %></li>
+  <li><%= link_to "Destroy", category_path(@category), method: :delete %></li>
+</ul>
+
+<% if flash[:alert].present? %>
+    <p class='flash-notice'><%= flash[:alert] %></p>
+<% end %>
