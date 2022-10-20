@@ -6,6 +6,7 @@
   <li><%= link_to "Destroy", category_path(@category), method: :delete %></li>
 </ul>
 
-<% if flash[:alert].present? %>
-    <p class='flash-notice'><%= flash[:alert] %></p>
-<% end %>
+<%= render @category.tasks %>
+
+<%= render "tasks/form" %>
+
