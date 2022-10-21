@@ -6,6 +6,7 @@
   <li><%= link_to "Destroy", category_path(@category), method: :delete %></li>
 </ul>
 
+<h1> Current Tasks </h1>
 <%= render @category.tasks %>
 
 <%= render "tasks/form" %>
