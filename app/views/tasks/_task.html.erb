@@ -3,4 +3,4 @@
 </p>
 
 <p>
-<li><%= link_to "Destroy Task", [task.category, task], method: :delete %></li>
+<li><%= link_to "Destroy Task", [task.category, task], method: :delete, data: {confirm: "Are you sure?"} %></li>

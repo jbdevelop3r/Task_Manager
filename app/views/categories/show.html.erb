@@ -3,7 +3,7 @@
 <ul>
   <li><%= link_to "Edit", edit_category_path(@category) %></li>
   <li><%= link_to "Home", categories_path(@category) %></li>
-  <li><%= link_to "Destroy", category_path(@category), method: :delete %></li>
+  <li><%= link_to "Destroy", category_path(@category), method: :delete, data: {confirm: "Are you sure?"} %></li>
 </ul>
 
 <h1> Current Tasks </h1>
