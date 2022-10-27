@@ -1,4 +1,11 @@
-<h1 class="category-header">Categories</h1>
+
+
+<div class="category-header">
+<p>Categories</p>
+<%= link_to new_category_path, class: "add-category" do %>
+<i class="fa-solid fa-plus"></i>
+<% end %>
+</div>
 
 <div class="category-all">
   <% @categories.each do |category| %>
@@ -8,9 +15,4 @@
   <% end %>
 </div>
 
-
-
-<%= link_to new_category_path, class: "add-category" do %>
-<i class="fa-solid fa-plus"></i>
-<% end %>
 

@@ -1,6 +1,14 @@
 .category-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.category-header p {
+  font-size: 30px;
+  margin-top: 15px;
 }
  
 .category-all {
@@ -41,17 +49,16 @@
 
 .add-category {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   color: #00abb3;
   font-size: 60px;
   text-decoration: none;
-  margin-top: 100px;
+  margin-left: 20px;
 }
 
 .add-category:hover {
   transform: scale(1.2);
   color: #00abb3;
-  transition: 0.3s ease-in-out;
 }
 
 .notice-container {
