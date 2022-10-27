@@ -1,26 +1,33 @@
 class TasksController < ApplicationController
     def create
-        @category = Category.find(params[:category_id])
-        @comment = @category.tasks.create(task_params)
+        @category = current_user.categories.find(params[:category_id])
+        @task = @category.tasks.create(task_params)
         redirect_to category_path(@category)
     end
 
+    def show 
+      @category = current_user.categories.find(params[:category_id])
+      @task = @category.tasks.find(params[:id])
+    end
+
     def edit
-        @task = Task.find(params[:id])
-      end
+        @category = current_user.categories.find(params[:category_id])
+        @task = @category.tasks.find(params[:id])
+    end
     
-      def update
-        @task = Task.find(params[:id])
+    def update
+        @category = current_user.categories.find(params[:category_id])
+        @task = @category.tasks.find(params[:id])
     
-        if @task.update(task_params)
-          redirect_to @category, alert: "task has been updated"
-        else
-          render :edit, status: :unprocessable_entity
-        end
+      if @task.update(task_params)
+        redirect_to @category, alert: "task has been updated"
+      else
+        render :edit, status: :unprocessable_entity
       end
+    end
 
     def destroy
-        @category = Category.find(params[:category_id])
+        @category = current_user.categories.find(params[:category_id])
         @task = @category.tasks.find(params[:id])
         @task.destroy
         redirect_to category_path(@category), status: :see_other
@@ -29,6 +36,6 @@ class TasksController < ApplicationController
     private
 
     def task_params
-          params.require(:task).permit(:task)
+          params.require(:task).permit(:task, :details, :deadline)
     end
 end

@@ -1,11 +1,16 @@
-<h1>Categories <i class="fa-solid fa-star fa-spin"></i></h1>
+<h1 class="category-header">Categories</h1>
 
-<ul>
+<div class="category-all">
   <% @categories.each do |category| %>
-    <li> 
-        <%= link_to category.title, category%>
-    </li>
+    <p  class="category-cont"> 
+        <%= link_to category.title, category, class: "category-name"%>
+    </p>
   <% end %>
-</ul>
+</div>
 
-<%= link_to "New Category", new_category_path %>
+
+
+<%= link_to new_category_path, class: "add-category" do %>
+<i class="fa-solid fa-plus"></i>
+<% end %>
+

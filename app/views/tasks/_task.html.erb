@@ -1,6 +1,10 @@
 <p>
   <%= task.task %>
 </p>
-
 <p>
-<li><%= link_to "Destroy Task", [task.category, task], method: :delete, data: {confirm: "Are you sure?"} %></li>
+  <%= task.details %>
+</p>
+<p>
+<li><%= link_to "Destroy Task", [task.category, task], method: :delete, data: {confirm: "Are you sureee?"} %></li>
+<li><%= link_to "Edit", edit_category_task_path(@category, task) %></li>
+<li><%= link_to "Show", category_task_path(@category, task) %></li>
