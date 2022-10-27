@@ -20,7 +20,7 @@ class TasksController < ApplicationController
         @task = @category.tasks.find(params[:id])
     
       if @task.update(task_params)
-        redirect_to @category, alert: "task has been updated"
+        redirect_to @category, alert: "Task has been updated."
       else
         render :edit, status: :unprocessable_entity
       end

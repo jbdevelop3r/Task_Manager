@@ -15,7 +15,9 @@
 
   <body style="background-color: #EAEAEA;">
     <%= render "categories/header" %>
-    <p> <%=notice%> </p>
+    <div class="notice-container">
+    <p class="notice"> <%=notice%> </p>
+    </div>
     <%= yield %>
   </body>
 </html>

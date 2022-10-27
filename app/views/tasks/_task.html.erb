@@ -1,10 +1,22 @@
-<p>
-  <%= task.task %>
-</p>
-<p>
-  <%= task.details %>
-</p>
-<p>
-<li><%= link_to "Destroy Task", [task.category, task], method: :delete, data: {confirm: "Are you sureee?"} %></li>
-<li><%= link_to "Edit", edit_category_task_path(@category, task) %></li>
-<li><%= link_to "Show", category_task_path(@category, task) %></li>
+
+<div class="tasks-container">
+  <div class="task-content">
+    <div class="title-settings">
+      <p>
+      <%= task.task %>
+      </p>
+      <div class="task-links">  
+      <%= link_to category_task_path(@category, task), class: "t-links" do %>
+        <i class="fa-solid fa-eye"></i>
+      <% end %>
+      <%= link_to edit_category_task_path(@category, task), class: "t-links" do %>
+        <i class="fa-solid fa-pen-to-square"></i>
+      <% end %>
+      <%= link_to [task.category, task], method: :delete, data: {confirm: "Are you sureee?"}, class: "t-links" do %>
+        <i class="fa-solid fa-trash"></i>
+      <% end %>
+      </div> 
+    </div>
+    </div>
+  </div>
+</div>

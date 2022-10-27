@@ -1,12 +1,17 @@
-<%= form_with model: @category do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% @category.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+<div class="new-cat">
+  <%= form_with model: @category do |form| %>
+    <div class="field mb-3 ">
+    <%# <%= form.label :title %>
+      <%= form.text_field :title, class:"form-input" %>
+      <% @category.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+      <div>
+      <p class="submit-category"><%= form.submit  %></p>
+      <p><%= link_to "Home", categories_path(@category), class: "submit-category" %></p>
+      </div>
+    </div>
+  <% end %>
+</div>  
+
+

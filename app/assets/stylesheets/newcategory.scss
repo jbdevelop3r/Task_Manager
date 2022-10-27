@@ -1,0 +1,27 @@
+.new-cat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-cat-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    color: #3C4048;
+}
+
+.submit-category {
+    margin-top: 20px;
+}
+
+.form-input {
+    width: 500px;
+}
+
+.submit-category {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}

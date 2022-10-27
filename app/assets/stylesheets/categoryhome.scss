@@ -1,65 +1,82 @@
-.category-header  {
-    display: flex;
-    justify-content: center;
+.category-header {
+  display: flex;
+  justify-content: center;
 }
-
+ 
 .category-all {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-flow: wrap;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-flow: wrap;
 }
 
 .category-cont {
-    width: 20%;
-    height: 200px;
-    background-color: #3C4048;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px; 
+  width: 20%;
+  height: 200px;
+  background-color: #3c4048;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
 }
 
 .category-name {
-    color: white;  
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .category-name:hover {
-    transform: scale(1.05);
-    color: white;  
+  transform: scale(1.05);
+  color: white;
 }
 
 .add-category {
-    display: flex;
-    justify-content: center;
-    color: #00ABB3;
-    font-size: 60px;
-    text-decoration: none;
-    margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  color: #00abb3;
+  font-size: 60px;
+  text-decoration: none;
+  margin-top: 100px;
 }
-
 
 .add-category:hover {
-    transform: scale(1.2);
-    color: #00ABB3;
-    transition: 0.3s ease-in-out;
+  transform: scale(1.2);
+  color: #00abb3;
+  transition: 0.3s ease-in-out;
 }
 
-
-
-
-@media screen and (max-width:1200px) {
-    .category-cont {
-        width: 40%;
-    }
+.notice-container {
+  display: flex;
+  justify-content: center;
 }
 
-@media screen and (max-width:600px) {
-    .category-cont {
-        width: 40%;
-    }
+.notice {
+  color: #00abb3;
+  width: 50%;
+  margin-top: 20px;
+  padding: 5px 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .category-cont {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .category-cont {
+    width: 40%;
+  }
 }

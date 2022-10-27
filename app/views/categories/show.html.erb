@@ -1,17 +1,28 @@
 
 <div class="category-show">
-<h1><%= @category.title %></h1>
-
-<div class="category-links">
-  <p><%= link_to "Edit", edit_category_path(@category), class: "category-links" %></p>
-  <p><%= link_to "Home", categories_path(@category), class: "category-links" %></p>
-  <p><%= link_to "Destroy", category_path(@category), class: "category-links", method: :delete, data: {confirm: "Are you sure?"} %></p>
-</ul>
+  <h1><%= @category.title %></h1>
+  <div class="category-links">
+    <p>
+      <%= link_to categories_path(@category), class: "category-links" do%>
+        <i class="fa-solid fa-house-user"></i>
+      <% end %>
+    </p>
+    <p>
+      <%= link_to edit_category_path(@category), class: "category-links" do %>
+        <i class="fa-solid fa-pen-to-square"></i>
+      <% end %>
+    </p>
+    <p>
+      <%= link_to category_path(@category), class: "category-links", method: :delete, data: {confirm: "Are you sure?"} do %>
+        <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </p>
+  </div>    
 </div>
-</div>
-
-<h1> Current Tasks </h1>
 <%= render @category.tasks %>
 
-<%= render "tasks/form" %>
+  <%= render "tasks/form"  %>
+
+
+
 

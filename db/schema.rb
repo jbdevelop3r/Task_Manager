@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2022_10_26_130920) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "details"
-    t.datetime "deadline"
+    t.date "deadline"
     t.index ["category_id"], name: "index_tasks_on_category_id"
   end
 

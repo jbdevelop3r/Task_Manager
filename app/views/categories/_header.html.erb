@@ -4,20 +4,20 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-3 mb-lg-0" style="margin-left: 20px;">
         <% if user_signed_in? %>
-            <li class="nav-item">
-                <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link text-light" %>
+            <li class="nav-item" >
+                <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav-link text-light" %>
             </li>
             <li class="nav-item">
-                <%= link_to "Edit Account", edit_user_registration_path, class:"nav-link text-light" %>
-            </li>
-        <% elsif %>
+                <%= link_to "EDIT ACCOUNT", edit_user_registration_path, class:"nav-link text-light" %>
+            </li> 
+            <% elsif %>
             <li class="nav-item">
-                <%= link_to "Log In", new_user_session_path, class:"nav-link text-light" %>
+                <%= link_to "LOGIN", new_user_session_path, class:"nav-link text-light" %>
             </li>
             <li class="nav-item">
-                <%= link_to "Register", new_user_registration_path, class:"nav-link text-light" %>
+                <%= link_to "REGISTER", new_user_registration_path, class:"nav-link text-light" %>
             </li>
         <% end %>
     </div>

@@ -1,16 +1,19 @@
-
+<h1 class="task-title"> Tasks </h1>
 <%= form_with model: [ @category, @category.tasks.build ] do |form| %>
   <p>
     <%= form.label :task %><br>
     <%= form.text_field :task %>
   </p>
+  <% @category.errors.full_messages_for(:title).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
   <p>
     <%= form.label :details %><br>
     <%= form.text_field :details %>
   </p>
   <p>
   <%= form.label :deadline %><br>
-  <%= form.text_field :deadline %>
+  <%= form.date_field :deadline %>
 </p>
   <p>
     <%= form.submit %>
