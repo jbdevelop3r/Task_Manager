@@ -6,10 +6,7 @@ class TasksController < ApplicationController
       @task = @category.tasks.create(task_params)
       redirect_to category_path(@category), notice: "A task has been created."
     end
-
-    def index 
-    end
-
+    
     def new 
       @task = @category.tasks.build
     end
