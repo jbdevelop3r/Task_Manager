@@ -6,7 +6,7 @@
         <i class="fa-solid fa-house-user"></i>
       <% end %>
     </p>
-    <p>
+    <p> 
       <%= link_to edit_category_path(@category), class: "category-links" do %>
         <i class="fa-solid fa-pen-to-square"></i>
       <% end %>
@@ -21,10 +21,9 @@
         <i class="fa-solid fa-plus"></i>
       <% end %>
     </p>
-  </div>    
+</div>   
 </div>
 <%= render @category.tasks %>
-
 
 
 

@@ -14,6 +14,9 @@
       <%= link_to [task.category, task], method: :delete, data: {confirm: "Are you sureee?"}, class: "t-links" do %>
         <i class="fa-solid fa-trash"></i>
       <% end %>
+       <a class="navbar-item">
+            <%= link_to "Tasks for today", "/today", class:"navbar-item" %>
+        </a>
       </div> 
     </div>
     </div>

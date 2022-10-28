@@ -2,7 +2,7 @@
   <%= link_to :back, class: "category-edit-back" do %>
     <i class="fa-solid fa-backward"></i>
   <% end %>
-</div>
+</div> 
 <div class="new-task-container">
   <div class="new-task-content">
   <%= form_with model: [ @category, @category.tasks.build ] do |form| %>
@@ -10,9 +10,9 @@
       <%= form.label :task, class: "new-task-label" %><br>
       <%= form.text_field :task, class: "edit-task-field" %>
     </p>
-    <% @category.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+    <% @category.errors.full_messages_for(:task).each do |message| %>
+      <div class="category-error"><%= message %></div>
+      <% end %>
     <p>
       <%= form.label :details, class: "new-task-label" %><br>
       <%= form.text_field :details, class: "edit-task-field" %>

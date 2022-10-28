@@ -7,17 +7,17 @@
       <ul class="navbar-nav me-auto mb-3 mb-lg-0" style="margin-left: 20px;">
         <% if user_signed_in? %>
             <li class="nav-item" >
-                <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav-link text-light" %>
+                <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav-link text-light", id: "logout" %>
             </li>
             <li class="nav-item">
-                <%= link_to "EDIT ACCOUNT", edit_user_registration_path, class:"nav-link text-light" %>
+                <%= link_to "EDIT ACCOUNT", edit_user_registration_path, class:"nav-link text-light", id: "edit-account" %>
             </li> 
             <% elsif %>
             <li class="nav-item">
-                <%= link_to "LOGIN", new_user_session_path, class:"nav-link text-light" %>
+                <%= link_to "LOGIN", new_user_session_path, class:"nav-link text-light", id: "login" %>
             </li>
             <li class="nav-item">
-                <%= link_to "REGISTER", new_user_registration_path, class:"nav-link text-light" %>
+                <%= link_to "REGISTER", new_user_registration_path, class:"nav-link text-light", id: "register" %>
             </li>
         <% end %>
     </div>

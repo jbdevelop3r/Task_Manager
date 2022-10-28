@@ -1,0 +1,8 @@
+#login, #edit-account, #logout, #register {
+    font-size: 22PX;
+}
+
+#login:hover, #edit-account:hover, #logout:hover, #register:hover {
+    transform: scale(1.05);
+    transition: .3s ease-in-out;
+}
