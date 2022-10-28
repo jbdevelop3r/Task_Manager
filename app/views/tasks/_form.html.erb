@@ -1,21 +1,29 @@
-<h1 class="task-title"> Tasks </h1>
-<%= form_with model: [ @category, @category.tasks.build ] do |form| %>
-  <p>
-    <%= form.label :task %><br>
-    <%= form.text_field :task %>
-  </p>
-  <% @category.errors.full_messages_for(:title).each do |message| %>
-    <div><%= message %></div>
+<div class="edit-task-head-buttons">
+  <%= link_to :back, class: "category-edit-back" do %>
+    <i class="fa-solid fa-backward"></i>
   <% end %>
-  <p>
-    <%= form.label :details %><br>
-    <%= form.text_field :details %>
-  </p>
-  <p>
-  <%= form.label :deadline %><br>
-  <%= form.date_field :deadline %>
-</p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %> 
+</div>
+<div class="new-task-container">
+  <div class="new-task-content">
+  <%= form_with model: [ @category, @category.tasks.build ] do |form| %>
+    <p>
+      <%= form.label :task, class: "new-task-label" %><br>
+      <%= form.text_field :task, class: "edit-task-field" %>
+    </p>
+    <% @category.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    <p>
+      <%= form.label :details, class: "new-task-label" %><br>
+      <%= form.text_field :details, class: "edit-task-field" %>
+    </p>
+    <p>
+      <%= form.label :deadline, class: "new-task-label" %><br>
+      <%= form.date_field :deadline, class: "edit-task-field" %>
+    </p>
+    <p>
+      <%= form.submit class: "new-task-submit" %>
+    </p>
+  <% end %> 
+  </div>
+</div>

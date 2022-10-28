@@ -1,17 +1,24 @@
-<%= form_with model: [ @category, @task] do |form| %>
-    <p>
-      <%= form.label :task %><br>
-      <%= form.text_field :task %>
-    </p>
-    <p>
-      <%= form.label :details %><br>
-      <%= form.text_field :details %>
-    </p>
-    <p>
-      <%= form.label :deadline %><br>
-      <%= form.date_field :deadline %>
-    </p>
-    <p>
-      <%= form.submit %>
-    </p>
-  <% end %>
+<%= link_to :back, class: "category-edit-back" do %>
+  <i class="fa-solid fa-backward"></i>
+<% end %>
+<div class="edit-task-container">
+  <div class="edit-task-content">
+    <%= form_with model: [ @category, @task] do |form| %>
+      <p>
+        <%= form.label :task, class: "edit-task-label" %><br>
+        <%= form.text_field :task, class: "edit-task-field" %>
+      </p>
+      <p>
+        <%= form.label :details, class: "edit-task-label" %><br>
+        <%= form.text_field :details, class: "edit-task-field" %>
+      </p>
+      <p>
+        <%= form.label :deadline, class: "edit-task-label" %><br>
+        <%= form.date_field :deadline, class: "edit-task-field" %>
+      </p>
+      <p>
+        <%= form.submit class: "edit-task-submit" %>
+      </p>
+    <% end %>
+  </div>
+</div>

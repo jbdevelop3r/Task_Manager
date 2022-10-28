@@ -1,0 +1,50 @@
+.edit-task-head-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.edit-task-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.edit-task-content {
+    width: 500px;
+}
+
+.edit-task-label {
+    font-size: 25px;
+}
+
+.edit-task-field {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    text-align: center;
+    color: white;
+    background-color: #3C4048;
+    font-size: 30px;
+    padding: 30px  10px;
+    border-radius: 10px;
+}
+
+.edit-task-submit {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 37%;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    background-color: #3C4048;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.edit-task-submit:hover {
+    background-color: #00abb3;
+    color: white;
+}

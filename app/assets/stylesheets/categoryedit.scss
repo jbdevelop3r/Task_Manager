@@ -1,0 +1,51 @@
+.new-cat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+}
+
+.form-input {
+    height: 50px;
+    text-align: center;
+    color: white;
+    background-color: #3C4048;
+    font-size: 30px;
+    padding: 30px  10px;
+    border-radius: 10px;
+}
+
+.category-edit-back {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+    font-size: 30px;
+    color: #3C4048;
+    text-decoration: none;
+    width: 30px;
+    margin-left: 95%;
+}
+
+.category-edit-back:hover {
+    color: #00abb3;
+}
+
+.edit-category-submit {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    background-color: #3C4048;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.edit-category-submit:hover {
+    background-color: #00abb3;
+    color: white;
+}

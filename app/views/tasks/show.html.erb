@@ -1,5 +1,12 @@
-<h1><%= @task.task %></h1>
-<p><%= @task.details%></p>
-<p><%= @task.deadline%></p>
-
-<p><%= link_to "Home", categories_path(@category), class: "category-links" %></p>
+<%= link_to :back, class: "category-edit-back" do %>
+  <i class="fa-solid fa-backward"></i>
+<% end %>
+<div class="show-task-container">
+    <div class="show-task-content">
+        <p><%= @task.task %></p>
+        <hr>
+        <p><%= @task.details%></p>
+        <hr>
+        <p><%= @task.deadline%></p>
+    </div>
+</div>

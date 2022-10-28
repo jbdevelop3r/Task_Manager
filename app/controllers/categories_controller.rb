@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
 
+  
+
   before_action :authenticate_user!
  
   def index
@@ -47,6 +49,8 @@ class CategoriesController < ApplicationController
 
 
   private
+
+  
   def category_params
     params.require(:category).permit(:title)
   end

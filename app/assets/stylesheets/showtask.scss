@@ -1,0 +1,17 @@
+.show-task-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.show-task-content {
+    width: 40%;
+    text-align: center;
+    background-color: #3C4048;
+    color: white;
+    font-size: 40px;
+    padding-top: 20px;
+    border-radius: 15px;
+}

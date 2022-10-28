@@ -1,18 +1,15 @@
-
-
 <div class="category-header">
-<p>Categories</p>
-<%= link_to new_category_path, class: "add-category" do %>
-<i class="fa-solid fa-plus"></i>
-<% end %>
+  <p>Categories</p>
+  <%= link_to new_category_path, class: "add-category" do %>
+  <i class="fa-solid fa-plus"></i>
+  <% end %>
 </div>
-
 <div class="category-all">
   <% @categories.each do |category| %>
     <p  class="category-cont"> 
         <%= link_to category.title, category, class: "category-name"%>
     </p>
   <% end %>
-</div>
+</div> 
 
 
