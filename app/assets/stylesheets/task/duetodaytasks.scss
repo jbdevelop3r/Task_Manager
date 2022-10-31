@@ -1,0 +1,17 @@
+.due-today-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+.due-today-content {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #3C4048;
+    color: white;
+    width: 80%;
+    padding: 20px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+} 

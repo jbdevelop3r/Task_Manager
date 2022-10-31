@@ -8,7 +8,15 @@ class TasksController < ApplicationController
     end
 
     def due_today
-      @due_today = current_user.tasks.where(deadline: Date.current)
+      @due_today = current_user.tasks.where('deadline = ?', Date.current)
+    end
+
+    def overdue
+      @overdue = current_user.tasks.where('deadline < ?', Date.current)
+    end
+
+    def futuretask
+      @futuretask = current_user.tasks.where('deadline > ?', Date.current)
     end
     
     def new 

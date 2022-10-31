@@ -1,0 +1,30 @@
+<%= link_to :back, class: "category-edit-back" do %>
+    <i class="fa-solid fa-backward"></i>
+<% end %>
+
+<% if @futuretask.length < 1 %>
+    <p> No details.. </p>
+<% else %>
+  <div class="due-today-container">
+    <% @futuretask.each do |test| %> 
+        <div class="due-today-content">   
+              <p>
+                  <strong>Category:</strong>
+                  <%= test.category.title %>
+              </p>
+              <p>
+                  <strong>Tasks:</strong>
+                  <%= test.task %>
+              </p>
+              <p>
+                  <strong>Details:</strong>
+                  <%= test.details %>
+              </p>
+              <p>
+                  <strong>Deadline:</strong>
+                  <%= test.deadline %>
+              </p> 
+                  </div>
+    <% end %>
+    </div>
+<% end %>

@@ -1,11 +1,13 @@
 class CategoriesController < ApplicationController
-
-  
-
   before_action :authenticate_user!
  
   def index
     @categories = current_user.categories
+    @tasks = current_user.tasks
+    @due_today = current_user.tasks.where('deadline = ?', Date.current)
+    @overdue = current_user.tasks.where('deadline < ?', Date.current)
+    @futuretask = current_user.tasks.where('deadline > ?', Date.current)
+
   end
   
   def show 

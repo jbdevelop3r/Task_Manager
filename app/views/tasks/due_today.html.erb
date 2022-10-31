@@ -1,23 +1,32 @@
-<% @due_today.each do |test| %>    
-    <p>
-        <strong>Category:</strong>
-        <%= test.category.title %>
-    </p>
-    <p>
-        <strong>Tasks:</strong>
-        <%= test.task %>
-    </p>
-
-    <p>
-        <strong>Details:</strong>
-        <%= test.details %>
-    </p>
-
-    <p>
-        <strong>Deadline:</strong>
-        <%= test.deadline %>
-    </p>
+<%= link_to :back, class: "category-edit-back" do %>
+  <i class="fa-solid fa-backward"></i>
 <% end %>
-            <a>
-                <%= link_to "Back", categories_path, class: "button is-link" %>
-            </a>
+<% if @due_today.length < 1 %>
+    <p> No details.. </p>
+<% else %>
+    <p> Tasks for today </p>
+    <div class="due-today-container">
+    
+        <% @due_today.each do |test| %> 
+        <div class="due-today-content">   
+            <p>
+                <strong>Category:</strong>
+                <%= test.category.title %>
+            </p>
+            <p>
+                <strong>Tasks:</strong>
+                <%= test.task %>
+            </p>
+            <p>
+                <strong>Details:</strong>
+                <%= test.details %>
+            </p>
+            <p>
+                <strong>Deadline:</strong>
+                <%= test.deadline %>
+            </p> 
+                </div>
+        <% end %>
+    </div>
+<% end %>
+

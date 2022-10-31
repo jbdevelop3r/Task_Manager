@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     resources :tasks
   end
   get "/today", to: "tasks#due_today"
+  get "/overdue", to: "tasks#overdue"
+  get "/futuretask", to: "tasks#futuretask"
 end

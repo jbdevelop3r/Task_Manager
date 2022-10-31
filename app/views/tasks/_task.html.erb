@@ -2,7 +2,7 @@
   <div class="task-content">
     <div class="title-settings">
       <p>
-      <%= task.task %>
+        <%= task.task %>
       </p>
       <div class="task-links">  
       <%= link_to category_task_path(@category, task), class: "t-links" do %>
@@ -14,9 +14,6 @@
       <%= link_to [task.category, task], method: :delete, data: {confirm: "Are you sureee?"}, class: "t-links" do %>
         <i class="fa-solid fa-trash"></i>
       <% end %>
-       <a class="navbar-item">
-            <%= link_to "Tasks for today", "/today", class:"navbar-item" %>
-        </a>
       </div> 
     </div>
     </div>
