@@ -23,7 +23,12 @@
     </p>
 </div>   
 </div>
-<%= render @category.tasks %>
+
+<% if @category.tasks.length < 1 %>
+  <p class="no-tasks"> You have no task.. </p>
+<% else %>
+  <%= render @category.tasks %>
+<% end %>
 
 
 

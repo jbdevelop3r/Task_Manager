@@ -39,7 +39,6 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-size: 40px;
   border-radius: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -59,6 +58,14 @@
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
   transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  font-size: 40px;
+}
+
+.each-category-task-length {
+  color: #fff;
+  margin-right: 60%;
+  margin-top: 10%;
+  
 }
 
 .category-name:hover {
@@ -76,10 +83,12 @@
   display: flex;
   justify-content: flex-end;
   color: #3c4048;
-  font-size: 60px;
+  font-size: 20px;
   text-decoration: none;
   margin-left: 10px;
   margin-right: 20px;
+  align-items: center;
+  gap: 10px;
 }
 
 .add-category:hover {
@@ -101,6 +110,8 @@
   justify-content: center;
   align-items: center;
 }
+
+
 
 @media screen and (max-width: 1200px) {
   .category-cont {
