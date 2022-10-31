@@ -4,7 +4,11 @@ class TasksController < ApplicationController
 
     def create
       @task = @category.tasks.create(task_params)
+      if @task.save
       redirect_to category_path(@category), notice: "A task has been created."
+      else
+      redirect_to new_category_task_path(@category), notice: "Please fill out all the fields"
+      end
     end
 
     def due_today
