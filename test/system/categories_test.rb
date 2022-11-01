@@ -20,8 +20,6 @@ class CategoriesTest < ApplicationSystemTestCase
   
     assert_text "Creating a Category"
   end
-
-
 end
 
 
