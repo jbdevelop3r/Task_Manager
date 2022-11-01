@@ -23,8 +23,10 @@
 <div class="category-all">
   <% @categories.each do |category| %>
     <div  class="category-cont"> 
-      <%= link_to category.title, category, class: "category-name"%> 
+      <%= link_to category.title, category, class: "category-name", title: category.title %>
       <p class="each-category-task-length">Tasks: (<%= category.tasks.length %>) </p>
     </div>
   <% end %>
 </div> 
+
+

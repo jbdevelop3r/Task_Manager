@@ -19,6 +19,12 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
 gem "font-awesome-rails"
+gem 'net-smtp', require: false
+
+group :test do
+  gem "cuprite"
+end
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -50,6 +56,7 @@ group :development do
 end
 
 group :test do
+  gem 'pry', '~> 0.13.1'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver', '>= 4.0.0.rc1'

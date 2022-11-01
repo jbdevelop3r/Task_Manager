@@ -1,7 +1,12 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: first category
+  user_id: 1
+  id: 1
+
 
 two:
-  title: MyString
+  title: second category
+  user_id: 1
+  id: 2
