@@ -14,11 +14,11 @@ class CategoriesTest < ApplicationSystemTestCase
   
     click_on "Add a category"
   
-    fill_in "category[title]", with: "Creating a Category"
+    fill_in "category[title]", with: "Creating a category"
   
     click_on "Create Category"
   
-    assert_text "Creating a Category"
+    assert_text "Creating a category"
   end
 end
 
