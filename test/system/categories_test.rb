@@ -21,25 +21,6 @@ class CategoriesTest < ApplicationSystemTestCase
     assert_text "Creating a Category"
   end
 
-  test "should edit a category" do
-    require "pry"
-
-    visit categories_path
-  
-
-    # binding.pry
-
-    find('a[href="/categories/1"]').click
-
-    find('a[href="/categories/1/edit"]').click
-  
-    fill_in "category[title]", with: "Updating a Category"
-  
-    click_on "commit"
-    
-    assert_text "Updating a Category"
-  
-  end
 
 end
 
