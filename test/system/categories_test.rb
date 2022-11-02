@@ -5,12 +5,10 @@ class CategoriesTest < ApplicationSystemTestCase
   def setup
     sign_in users(:one)
     @category = categories(:one)
-    @user = users(:one)
   end
 
-
   test "should create a category" do
-    visit categories_path
+    visit categories_url
   
     click_on "Add a category"
   
