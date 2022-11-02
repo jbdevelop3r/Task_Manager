@@ -8,8 +8,21 @@
 
 .category-header p {
   font-size: 30px;
-  margin-top: 15px;
   margin-left: 10px;
+}
+
+.greet-user {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  margin-left: 60px;
+}
+
+.greet-user span {
+  background-color: #00abb3;
+  padding: 8px  12px;
+  color: #fff;
+  border-radius: 10px;
 }
 
 .task-today {
@@ -126,9 +139,12 @@
   }
 }
 
-.task-today {
-  animation: blinker 2s linear infinite;
+.task-today:hover{
+  animation: blinker 1s linear infinite;
 }
+
+
+
 
 @keyframes blinker {
   50% {

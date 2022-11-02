@@ -4,6 +4,3 @@ one:
   task: asdfasdf
   category: one
 
-two:
-  task: MyString
-  category: two

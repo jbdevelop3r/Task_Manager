@@ -2,11 +2,4 @@
 
 first_category:
   title: first category
-  user_id: 1
-  id: 1
-
-
-two:
-  title: second category
-  user_id: 1
-  id: 2
+  user: justine

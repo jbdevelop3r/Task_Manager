@@ -1,3 +1,4 @@
+<p class="greet-user"><span> Hello, <%= current_user.email %>!</span></p>
 <div class="category-header">
   <p>Categories</p>
   <%= link_to new_category_path, class: "add-category" do %>
@@ -7,17 +8,14 @@
  
 <%= link_to "/today", class:"task-today" do %>
   View today's tasks (<%= @due_today.length %>)
-  <i class="fa-solid fa-list-check"></i>
 <% end %>
 
 <%= link_to "/overdue", class:"task-today" do %>
   View overdue tasks (<%= @overdue.length %>)
-  <i class="fa-solid fa-list-check"></i>
 <% end %>
 
 <%= link_to "/futuretask", class:"task-today" do %>
   View future tasks (<%= @futuretask.length %>)
-  <i class="fa-solid fa-list-check"></i>
 <% end %>
 
 <div class="category-all">
@@ -28,5 +26,7 @@
     </div>
   <% end %>
 </div> 
+
+
 
 
