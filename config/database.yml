@@ -20,7 +20,7 @@ default: &default
   host: containers-us-west-48.railway.app
   username: postgres
   password: fp0pkRerI9i13DRDEFfO
-  port: postgres
+  port: 8017
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
