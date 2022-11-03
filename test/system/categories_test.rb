@@ -23,6 +23,13 @@ class CategoriesTest < ApplicationSystemTestCase
     assert_selector "p", text: "Categories"
   end
 
+  test "check today's tasks" do
+    visit categories_url
+
+    Capybara.page.find('.due-today-show').click
+    assert_text "No record yet."
+  end
+
   test "should create a category" do
     visit categories_url
 
@@ -62,6 +69,8 @@ class CategoriesTest < ApplicationSystemTestCase
     assert_text "A category has been deleted."
   end
 end
+
+
 
 
 

@@ -6,15 +6,15 @@
   <% end %>
 </div>
 
-<%= link_to "/today", class:"task-today" do %>
+<%= link_to "/today", class:"due-today-show" do %>
     View today's tasks (<%= @due_today.length %>)
 <% end %>
  
-<%= link_to "/overdue", class:"task-today" do %>
+<%= link_to "/overdue", class:"overdue-show" do %>
   View overdue tasks (<%= @overdue.length %>)
 <% end %>
  
-<%= link_to "/futuretask", class:"task-today" do %>
+<%= link_to "/futuretask", class:"futuretask-show" do %>
   View future tasks (<%= @futuretask.length %>)
 <% end %>
 

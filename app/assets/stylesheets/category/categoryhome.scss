@@ -25,7 +25,7 @@
   border-radius: 10px;
 }
 
-.task-today {
+.due-today-show, .overdue-show, .futuretask-show {
   text-decoration: none;
   margin-left: 60px;
   color: black;
