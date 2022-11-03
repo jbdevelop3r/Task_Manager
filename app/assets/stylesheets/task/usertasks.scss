@@ -37,7 +37,7 @@
     flex-direction: row;
 }
 
-.t-links {
+.t-links-show-task, .t-links-edit-task, .t-links-delete-task {
     text-decoration: none;
     display: flex;
     margin: 20px;

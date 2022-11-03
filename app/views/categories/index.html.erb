@@ -2,14 +2,14 @@
 <div class="category-header">
   <p>Categories</p>
   <%= link_to new_category_path, class: "add-category" do %>
-    Add a category <i class="fa-solid fa-plus"> </i>
+    Add a category
   <% end %>
 </div>
- 
-<%= link_to "/today", class:"task-today" do %>
-  View today's tasks (<%= @due_today.length %>)
-<% end %>
 
+<%= link_to "/today", class:"task-today" do %>
+    View today's tasks (<%= @due_today.length %>)
+<% end %>
+ 
 <%= link_to "/overdue", class:"task-today" do %>
   View overdue tasks (<%= @overdue.length %>)
 <% end %>
@@ -18,7 +18,10 @@
   View future tasks (<%= @futuretask.length %>)
 <% end %>
 
-<div class="category-all">
+<%if @categories.length < 1 %>
+  <p class="no-category-yet"> NO CATEGORY YET </p>
+<% else %>
+  <div class="category-all">
   <% @categories.each do |category| %>
     <div  class="category-cont"> 
       <%= link_to category.title, category, class: "category-name", id: "index-show-category" %>
@@ -26,6 +29,7 @@
     </div>
   <% end %>
 </div> 
+<% end %>
 
 
 

@@ -104,7 +104,7 @@
   gap: 10px;
   color: white;
   background-color: #00abb3;
-  padding: 3px 6px;
+  padding: 3px 12px;
   border-radius: 7px;
 }
 
@@ -126,6 +126,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.no-category-yet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  height: 40vh;
+  color: #d1583d;
 }
 
 

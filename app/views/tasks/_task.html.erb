@@ -5,13 +5,13 @@
         <%= task.task %>
       </p>
       <div class="task-links">  
-      <%= link_to category_task_path(@category, task), class: "t-links" do %>
+      <%= link_to category_task_path(@category, task), class: "t-links-show-task" do %>
         <i class="fa-solid fa-eye"></i>
       <% end %>
-      <%= link_to edit_category_task_path(@category, task), class: "t-links" do %>
+      <%= link_to edit_category_task_path(@category, task), class: "t-links-edit-task" do %>
         <i class="fa-solid fa-pen-to-square"></i>
       <% end %>
-      <%= link_to [task.category, task], method: :delete, data: {confirm: "Are you sureee?"}, class: "t-links" do %>
+      <%= link_to [task.category, task], method: :delete, data: {confirm: "Are you sure you want to delete?"}, class: "t-links-delete-task" do %>
         <i class="fa-solid fa-trash"></i>
       <% end %>
       </div> 

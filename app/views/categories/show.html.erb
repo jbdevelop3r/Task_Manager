@@ -17,7 +17,7 @@
       <% end %>
     </p>
     <p>
-      <%= link_to new_category_task_path(@category, @task), class: "category-links" do %>
+      <%= link_to new_category_task_path(@category, @task), class: "category-links-add-task" do %>
         <i class="fa-solid fa-plus"></i>
       <% end %>
     </p>
@@ -25,11 +25,11 @@
 </div>
 
 <% if @category.tasks.length < 1 %>
-  <p class="no-tasks"> You have no task.. </p>
+  <p class="no-tasks"> No task under this category. </p>
 <% else %>
   <%= render @category.tasks %>
 <% end %>
-0
+
 
 
 

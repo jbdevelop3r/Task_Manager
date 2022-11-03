@@ -14,7 +14,7 @@
 }
 
 
-.category-links-edit, .category-links-delete {
+.category-links-edit, .category-links-delete, .category-links-add-task {
     text-decoration: none;
     display: flex;
     margin: 20px;
@@ -28,7 +28,7 @@
 }
 
 .no-tasks {
-    color: #00abb3;
+    color: #d1583d;;
     display: flex;
     justify-content: center;
     align-items: center;

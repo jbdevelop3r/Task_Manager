@@ -3,7 +3,7 @@
 <% end %>
 
 <% if @futuretask.length < 1 %>
-    <p> No details.. </p>
+    <p class="no-due-details"> No record yet.  </p>
 <% else %>
   <div class="due-today-container">
     <% @futuretask.each do |test| %> 

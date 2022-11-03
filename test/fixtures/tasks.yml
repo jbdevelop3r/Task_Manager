@@ -1,6 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  task: asdfasdf
-  category: one
+# one:
+#   task: first
+#   category: one
 
+one:
+  task: MyString
+  details: MyText
+  deadline: 2022-10-22
+  category: first_category
