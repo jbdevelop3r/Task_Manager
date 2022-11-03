@@ -2,7 +2,7 @@
 <div class="category-header">
   <p>Categories</p>
   <%= link_to new_category_path, class: "add-category" do %>
-    Add a category
+    Add a category 
   <% end %>
 </div>
 
@@ -13,7 +13,7 @@
 <%= link_to "/overdue", class:"task-today" do %>
   View overdue tasks (<%= @overdue.length %>)
 <% end %>
-
+ 
 <%= link_to "/futuretask", class:"task-today" do %>
   View future tasks (<%= @futuretask.length %>)
 <% end %>
