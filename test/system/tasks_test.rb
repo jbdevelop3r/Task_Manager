@@ -8,14 +8,6 @@ class TasksTest < ApplicationSystemTestCase
     login_as(@user, 'justine')
   end
  
-  def login_as(user, password)
-    visit new_user_session_path
-    fill_in 'user_email', with: user.email
-    fill_in  'user_password', with: password
-    click_on 'Log in'
-    assert_text "Hello, justinebanogon14@gmail.com!"
-  end
-
   test "creating a new Task" do
     visit categories_url
     Capybara.page.find('.category-name').click
