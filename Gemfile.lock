@@ -90,6 +90,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dockerfile-rails (1.2.0)
+      rails
     erubi (1.11.0)
     ferrum (0.12)
       addressable (~> 2.5)
@@ -243,6 +245,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   cuprite
   devise (~> 4.8, >= 4.8.1)
+  dockerfile-rails (>= 1.2)
   font-awesome-rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
